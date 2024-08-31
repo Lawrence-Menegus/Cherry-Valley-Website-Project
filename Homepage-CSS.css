@@ -29,13 +29,14 @@
   padding: 0 50px;
 }
 
-#navbar__logo{
+#navbar__logo {
   background-color: #204A93;
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  -moz-background-clip: text; /* For Mozilla browsers */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  -moz-text-fill-color: transparent; /* For Mozilla browsers */
   display: flex;
   align-items: center;
   cursor: pointer;
