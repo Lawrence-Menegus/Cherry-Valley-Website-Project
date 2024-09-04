@@ -1,9 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Scheherazade New', sans-serif;
 }
+
+.slideshow-container {
+  max-width: 100%; /* Full width container */
+  position: relative;
+  margin: auto;
+}
+
+/* Fixed size container for images */
+.image-container {
+  width: auto; /* Set the desired width */
+  height: 635px; /* Set the desired height */
+  overflow: hidden; /* Hide overflowed parts of the image */
+  position: relative;
+}
+
+/* Ensure the image covers the container */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop the image to fit the container */
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 
 .navbar{
   background: #eed6c2;
@@ -12,6 +50,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  font-family: 'Scheherazade New';
   position: sticky;
   top: 0;
   z-index: 999;
@@ -193,9 +232,6 @@
   #mobile.-menu.is-active .bar:nth-child(3){
       transform: translateY(-8px) rotate(-45deg);
   }
-
-
-  
 
   
 }
