@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="Contact- CSS.css" />
+    <link rel="stylesheet" href="Contact us/Contact- CSS.css" />
   </head>
   <body>
     <!-- General Buttons Webpage -->
@@ -13,7 +13,7 @@
       <div class="navbar__container">
         <a href="/" id="navbar__logo">
           <img
-            src="Cherry Valley logo .png"
+            src="Contact us/Contact us images/Cherry Valley logo .png"
             alt="FriendsOfCherryValleyLogo"
             class="navbar__logo-image"
           />
@@ -45,40 +45,51 @@
         </ul>
       </div>
     </nav>
-    <script src="Contact-JS.js"></script>
+    <script src="Contact us/Contact-JS.js"></script>
 
     <!-- All Page contents below -->
      
-    <!-- Contact Section -->
+    <!-- Contact Us Message -->
     <div class="contact-section">
-        <div class="overlay"></div>
-        <div class="contact-container">
-            <h1>Questions?</h1>
-
-            <!--Import google Form for contact information-->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCoo1GocxRefXEuD6cttcUTOzDig85mlS0ndndvBKOX8WC9Q/viewform?embedded=true" 
-            width="640" height="739" frameborder="0" 
-            marginheight="0" marginwidth="0">Loading…</iframe>
-        
-
-            <h2>Join Our Social Media </h2> 
-
-
-            <!--Insert social media Links here (Facebook etc...)-->
-
-
-
-            <!--For location of Cherry Valley-->
-            <h2>Our Location on Google Maps</h2>
-
-            <!--Google maps for loaction-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.4828198009254!2d-75.17451862313843!3d40.970907321723864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c489f1f668dceb%3A0xcdf75d8a3871d4c8!2sCherry%20Valley%20National%20Wildlife%20Refuge!5e0!3m2!1sen!2sus!4v1725637254235!5m2!1sen!2sus" 
-            width="600" height="450" style="border:0;" allowfullscreen="" 
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        </div>
+      <div class="overlay"></div>
+      <div class="contact-container">
+        <h1>Questions?</h1>
+        <h2>Contact Us!</h2>
+        <p>
+          Whether you have questions about upcoming events, want to learn more about
+          our organization, or want to connect with us, please fill out the form below and we will get back to you as quickly as possible!
+        </p>
+      </div>
     </div>
-
+    
+    <!-- Contact Form -->
+    <div class="container">
+      <form class="contact-form">
+        <!-- Name and Email fields in the same row -->
+        <div class="name-email-container">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+        </div>
+    
+        <!-- Message field -->
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    
+    <!-- Images at Bottom of Screen -->
+    <div class="image-bottom">
+      <img src="/Contact us/Contact us images/Cherry valley fence photo.jpg" class="Bottom-image1">
+      <img src="Contact us/Contact us images/Cherry valley fence photo.jpg" class="Bottom-image2">
+      <img src="Contact us/Contact us images/Cherry valley fence photo.jpg" class="Bottom-image3">
+    </div>
+    
     <!--Footer part of the Webpage-->
     <div class="Footer_section">
         <div class="overlay"></div>
@@ -87,12 +98,5 @@
         </div>
     </div>
 
-
-<<<<<<< HEAD:Contact us/Contact - HTML.html
 </body>
 </html>
-=======
-    <h1>Contact Us</h1>
-  </body>
-</html>
->>>>>>> a86353a9014165cebed163c773fe5d4b636a0ced:Contact - HTML.html
