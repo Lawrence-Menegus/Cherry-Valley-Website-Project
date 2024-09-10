@@ -250,7 +250,7 @@ body {
 }
 
 .Upcoming-container{
-  background-color: #DEC891;
+  background-color: #152a11;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 6px #152a11;
@@ -261,7 +261,7 @@ body {
   
 }
 .Newsletter-container {
-  background-color: #DEC891;
+  background-color: #152a11;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px #152a11;
@@ -288,7 +288,7 @@ body {
 .Newsletter-container h1 {
   font-size: clamp(20px, 5vw, 45px);
   margin-bottom: 20px;
-  color: #152a11;
+  color: #DEC891;
 }
 
 /* Photo Gallery */
