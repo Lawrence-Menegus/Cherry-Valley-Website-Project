@@ -1,12 +1,16 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+
+body {
+  background: linear-gradient(to bottom, #ffffff, #152a11);
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Scheherazade New", sans-serif;
+  font-family: 'Scheherazade New', sans-serif;
 }
+
 
 .navbar {
   background: #eed6c2;
@@ -32,20 +36,19 @@
 }
 
 #navbar__logo {
-  background-color: #204a93;
+  background-color: #204A93;
   background-size: 100%;
-  background-clip: text; /* Standard property */
-  -webkit-background-clip: text; /* For WebKit browsers */
-  -moz-background-clip: text; /* For Mozilla browsers */
-  -webkit-text-fill-color: transparent; /* For WebKit browsers */
-  -moz-text-fill-color: transparent; /* For Mozilla browsers */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   display: flex;
   align-items: center;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-
-  font-size: 1.5rem;
+  font-size: clamp(14px, 1.7vw, 35px);
 }
 
 .navbar__logo-image {
@@ -69,12 +72,12 @@
 }
 
 .navbar__links {
-  color: #204a93;
+  color: #204A93;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 0 0.5rem;
+  padding: 0 .5rem;
   height: 100%;
   white-space: nowrap;
 }
@@ -96,7 +99,7 @@
   outline: none;
   border-radius: 4px;
   background: #fff;
-  color: #204a93;
+  color: #204A93;
 }
 
 @media screen and (max-width: 960px) {
@@ -179,17 +182,5 @@
   .navbar__toggle .bar {
     display: block;
     cursor: pointer;
-  }
-
-  #mobile.-menu.is-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  #mobile.-menu.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  #mobile.-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
 }
