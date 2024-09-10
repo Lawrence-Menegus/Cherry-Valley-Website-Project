@@ -241,7 +241,7 @@ body {
   color: #ffd700;
 }
 .contact-container p {
-  font-size: clamp(15px, 5vw, 30px); 
+  font-size: clamp(10px, 3vw, 30px); 
   margin-bottom: 20px;
 }
 
