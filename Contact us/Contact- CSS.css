@@ -245,7 +245,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Contact Form Box */
+/* Contact Google Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -253,92 +253,33 @@ body {
   padding: 30px;
   border-radius: 8px;
   width: 90%; /* Responsive width */
-  max-width: 800px; /* Maximum width for larger screens */
-  margin: 0 auto 40px; /* Center the form and add margin at the bottom */
+  max-width: 650px; 
+  margin: 0 auto 40px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: white;
   position: relative;
   z-index: 1;
   border: 2px solid #152a11;
 }
-
-/* Form Group */
-.form-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Inputs and Textareas */
-.form-group input,
-.form-group textarea {
+.form-container {
   width: 100%;
-  padding: 15px;
-  border: 2px solid #1F3D1A;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-  color: #1F3D1A;
-  font-size: 1rem;
+  max-width: 1200px; /* Optional max-width for larger screens */
+  margin: 0 auto; 
 }
 
-/* Placeholder Styles */
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #000000;
-  font-style: italic;
+.contact-form iframe {
+  width: 100%;
+  height: 840px;
 }
 
-/* Focus State */
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #1F3D1A;
-  outline: none;
-}
-
-/* Align Name and Email on the Same Line */
-@media screen and (min-width: 768px) { /* Adjust width as needed */
-  .name-email-container {
-    display: flex;
-    justify-content: space-between;
+/* Media query to adjust width */
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
   }
 
-  .name-email-container .form-group {
-    width: 48%; /* Split the width between the two */
-  }
-}
-
-/* Submit Button */
-.submit-btn {
-  background-color: #DEC891;
-  color: #1F3D1A;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.submit-btn:hover {
-  background-color: #FFD700;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design - Adjustments for smaller screens */
-@media screen and (max-width: 500px) {
-  .contact-container {
-    width: 95%; 
-    padding: 20px; 
-  }
-
-  .contact-form {
-    width: 95%; 
-    padding: 20px;
-  }
-
-  .contact-container h1 {
-    font-size: clamp(24px, 6vw, 40px); 
+  .contact-form iframe {
+    width: 100%; 
   }
 }
 
@@ -348,23 +289,23 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 10; /* Space between images */
+  flex-direction: column;
 }
 
 .Bottom-image1,
 .Bottom-image2,
 .Bottom-image3 {
   width: 30%;
-  margin: 20px 10px; /* Add margins around the images */
+  margin: 20px 5px; /* Add margins around the images */
   box-sizing: border-box;
 }
 
-/* Responsive Design - Stack the images on smaller screens */
 @media screen and (max-width: 500px) {
   .Bottom-image1,
   .Bottom-image2,
   .Bottom-image3 {
     width: 100%; /* Stack the images */
-    margin: 10px 0; /* Adjust margins for stacking */
+    margin: 20px 0; 
   }
 }
 
