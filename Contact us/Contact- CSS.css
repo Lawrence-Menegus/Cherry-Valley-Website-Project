@@ -230,15 +230,19 @@ body {
 }
 
 .contact-container h1 {
-  font-size: clamp(28px, 5vw, 40px); /* Responsive font size */
+  font-size: clamp(28px, 5vw, 60px); /* Responsive font size */
   margin-bottom: 20px;
   color: #ffd700;
 }
 
 .contact-container h2 {
-  font-size: clamp(20px, 5vw, 30px); 
+  font-size: clamp(20px, 5vw, 45px); 
   margin-bottom: 20px;
   color: #ffd700;
+}
+.contact-container p {
+  font-size: clamp(15px, 5vw, 30px); 
+  margin-bottom: 20px;
 }
 
 /* Contact Form Box */
@@ -343,7 +347,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px 0; /* Space between images */
+  margin: 20px 10; /* Space between images */
 }
 
 .Bottom-image1,
