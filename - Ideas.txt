@@ -1,0 +1,15 @@
+- Pop Up Interest Form (integrate that with Google Forms)
+	- Email
+	- Name
+
+- Visit Adirondacks UI inspiration
+
+- Photo Galley of Officers w/ bio & pic
+
+- Carousel of Board Members w/ bio & pic
+
+- Event Calendar (widget)
+
+- Social Media Platform Creation
+
+- Possible Formal Relationship with ESU
