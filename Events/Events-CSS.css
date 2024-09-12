@@ -218,7 +218,7 @@ body {
 
 /* Gold box container for Calendar */
 .Calendar-container {
-  background-color: #b3a072;
+  background-color: #9eb3a1;
   padding: 40px;
   border-radius: 8px;
   width: 95%;
@@ -250,7 +250,7 @@ body {
 }
 
 .Upcoming-container{
-  background-color: #152a11;
+  background-color: #d0ded2;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 6px #152a11;
@@ -258,16 +258,17 @@ body {
   text-align: center;
   width: 90%;
   margin-left: 30px;
-  
+  border: 2px solid #152a11;
 }
 .Newsletter-container {
-  background-color: #152a11;
+  background-color: #d0ded2;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px #152a11;
   color: white;
   text-align: center;
   width: 90%;
+  border: 2px solid #152a11;
   
 }
 .Upcoming-container img
@@ -288,21 +289,22 @@ body {
 .Newsletter-container h1 {
   font-size: clamp(20px, 5vw, 45px);
   margin-bottom: 20px;
-  color: #DEC891;
+  color: #152a11;
 }
 
 /* Photo Gallery */
 #gallery-container {
-  background-color: #DEC891;
+  background-color: #3f6746;
   padding: 20px;
   border-radius: 8px;
   width: 90%;
   max-width: 1200px; 
-  box-shadow: 0 4px 6px #152a11;
+  box-shadow: 0 6px 10px #152a11;
   text-align: center;
   position: relative;
-  margin: auto;
-  margin-bottom: 60px;
+  margin: 30px;
+  margin-bottom: 20px;
+  border: 2px solid #152a11;
 }
 
 #gallery {
@@ -315,7 +317,7 @@ body {
 
 #gallery h1 {
   font-size: clamp(20px, 5vw, 45px); 
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   color: #152a11;
 }
 

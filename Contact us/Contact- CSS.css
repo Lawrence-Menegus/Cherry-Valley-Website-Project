@@ -249,17 +249,18 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  background-color: #1F3D1A;
+  background-color: #435b47;
+  opacity: .8;
   padding: 30px;
   border-radius: 8px;
   width: 90%; /* Responsive width */
   max-width: 650px; 
   margin: 0 auto 40px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   color: white;
   position: relative;
   z-index: 1;
-  border: 2px solid #152a11;
+  border: 3px solid #152a11;
 }
 .form-container {
   width: 100%;
@@ -288,16 +289,17 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px 10; /* Space between images */
+  margin: 10px 0; /* Space between images */
   flex-direction: column;
 }
 
 .Bottom-image1,
 .Bottom-image2,
 .Bottom-image3 {
-  width: 30%;
+  width: 25%;
   margin: 20px 5px; /* Add margins around the images */
   box-sizing: border-box;
+  margin-left: 30px;
 }
 
 @media screen and (max-width: 500px) {
