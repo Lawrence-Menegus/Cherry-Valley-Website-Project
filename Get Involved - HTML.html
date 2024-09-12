@@ -1,54 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Heading for Webpage -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get Involved</title>
-    <link rel="stylesheet" href="Get Involved/Get Involved - CSS.css" />
-  </head>
-  <body>
-    <!-- General Buttons Webpage -->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <a href="/" id="navbar__logo">
-          <img
-            src="Get Involved/Get Involved images/Cherry Valley logo .png"
-            alt="FriendsOfCherryValleyLogo"
-            class="navbar__logo-image"
-          />
-          FRIENDS OF CHERRY VALLEY WILDLIFE REFUGE</a
-        >
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="Homepage-HTML.html" class="navbar__links">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="About us - HTML.html" class="navbar__links">About</a>
-          </li>
-          <li class="navbar__item">
-            <a href="Events - HTML.html" class="navbar__links">Events</a>
-          </li>
-          <li class="navbar__item">
-            <a href="Get Involved - HTML.html" class="navbar__links"
-              >Get Involved</a
-            >
-          </li>
-          <li class="navbar__item">
-            <a href="Contact - HTML.html" class="navbar__links">Contact Us</a>
-          </li>
-        </ul>
+<!-- Heading for Webpage -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Involved</title>
+  <link rel="stylesheet" href="Get Involved/Get Involved - CSS.css" />
+</head>
+
+<body>
+  <!-- General Buttons Webpage -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">
+        <img src="Get Involved/Get Involved images/Cherry Valley logo .png" alt="FriendsOfCherryValleyLogo"
+          class="navbar__logo-image" />
+        FRIENDS OF CHERRY VALLEY WILDLIFE REFUGE</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-    </nav>
-    <script src="Get Involved/Get Involved - JS.js"></script>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="Homepage-HTML.html" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="About us - HTML.html" class="navbar__links">About</a>
+        </li>
+        <li class="navbar__item">
+          <a href="Events - HTML.html" class="navbar__links">Events</a>
+        </li>
+        <li class="navbar__item">
+          <a href="Get Involved - HTML.html" class="navbar__links">Get Involved</a>
+        </li>
+        <li class="navbar__item">
+          <a href="Contact - HTML.html" class="navbar__links">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <script src="Get Involved/Get Involved - JS.js"></script>\
 
-    <!-- All Page contents below -->
+  <!-- All Page contents below -->
 
-    <h1>Get Involved</h1>
-  </body>
+  <!-- GetInvoled Title and Description -->
+  <div class="DonationsMembershipsSection">
+    <div class="GetInvolvedOpeningText">
+      <h1>Donations and Memberships</h1>
+      <p class="GetInvolvedParagraphText">
+        Thank You For Your Interest in Supporting Friends of Cherry Valley!
+        We ensure your donations are spent in meaningful ways. Some ways your
+        donations may be spend include: community activities, maintenance, and
+        conservation efforts.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <br><br>
+  </div>
+
+
+
+  <!-- PayPal Donate Button -->
+  <div class="donationButton">
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="business" value="QRXU9FW8VS4GE" />
+      <input type="hidden" name="no_recurring" value="1" />
+      <input type="hidden" name="item_name"
+        value="Join us in protecting nature! Your donation helps preserve wildlife and habitats for future generations. Every bit counts!" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <button type="submit" class="customPaypalButton">Support Nature</button>
+      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  </div>
+
+  <div>
+    <br><br><br><br>
+  </div>
+
+
+  <!-- Subscription Container -->
+  <div class="subscriptionContainer">
+    <div class="subscriptionBox">
+      <h3>Membership</h3>
+      <p>
+        - Receive the newsletter and important updates about our organizaion <br>
+        - Invitations to member-only events <br>
+      </p>
+      <p><strong>$10 / month</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="LZ2AAH77CUSTL" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="customPaypalButton">Support Nature</button>
+      </form>
+    </div>
+
+    <div class="subscriptionBox">
+      <h3>Combo 1</h3>
+      <p>
+        - Receive the newsletter and important updates about our organizaion <br>
+        - Invitations to member-only events <br>
+        - Thank you for your extra financial support! <br>
+      </p>
+      <p><strong>$25 / month</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="WNR2H5XXJMJ6Q" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="customPaypalButton">Support Nature</button>
+      </form>
+
+    </div>
+
+    <div class="subscriptionBox">
+      <h3>Combo 2</h3>
+      <p>
+        - Receive the newsletter and important updates about our organizaion <br>
+        - Invitations to member-only events <br>
+        - Thank you for your extra financial support! <br>
+      </p>
+      <p><strong>$50 / month</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="F9DDDNZD8N6B2" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="customPaypalButton">Support Nature</button>
+      </form>
+    </div>
+
+    <div class="subscriptionBox">
+      <h3>Combo 3</h3>
+      <p>
+        - Receive the newsletter and important updates about our organizaion <br>
+        - Invitations to member-only events <br>
+        - Thank you for your extra financial support! <br>
+      </p>
+      <p><strong>$75 / month</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="2SVMPLM6MF7H8" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="customPaypalButton">Support Nature</button>
+      </form>
+    </div>
+
+    <div class="subscriptionBox">
+      <h3>Combo 4</h3>
+      <p>
+        - Receive the newsletter and important updates about our organizaion <br>
+        - Invitations to member-only events <br>
+        - Thank you for your extra financial support! <br>
+      </p>
+      <p><strong>$100 / month</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="YZFQWD5NXNTYS" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="customPaypalButton">Support Nature</button>
+      </form>
+    </div>
+
+    <div class="subscriptionBox">
+      <h3>Corporate Sponsor</h3>
+      <p>
+        - Receive the newsletter and important updates about our organizaion <br>
+        - Invitations to member-only events <br>
+        - Receive corporate only invitations <br></p>
+      <p><strong>$100 / month</strong></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="5PNTEERACCEN6" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <button type="submit" class="customPaypalButton">Support Nature</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Mail Donation and imgs boxes -->
+  <div class="content-section">
+    <div class="big-rectangle">
+      <h1>Main-In Donations</h1>
+      <p>If you prefer to main in a donation, please make checks payable to
+        Friends of Cherry Valley National Wildlife Refuge, and mail to:
+      </p><br>
+      <p2>2138 Croasdale Road, Stroudsburg PA 18360</p2>
+    </div>
+
+    <div class="right-rectangles">
+      <div class="image-rectangle">
+        <img src="your-image1.jpg" alt="Image 1" />
+      </div>
+      <div class="image-rectangle">
+        <img src="your-image2.jpg" alt="Image 2" />
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
 </html>
