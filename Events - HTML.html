@@ -42,14 +42,22 @@
     <div class="Upcoming-events">
       <div class="Upcoming-container">
           <h1>Upcoming Events</h1>
-          <img src="Events/Events images/Fall Festival.webp" class="upcoming" />
+          <img id="upcomingImg" img src="Events/Events images/Fall Festival.webp" class="upcoming" alt="Upcoming Event Image"/>
       </div>
   
       <div class="Newsletter-container">
           <h1>Newsletter</h1>
-          <img src="Events/Events images/2024 Annual Members Meeting Invite.webp" class="newsletter" />
+          <img id="newsletterImg" img src="Events/Events images/2024 Annual Members Meeting Invite.webp" class="newsletter" alt="Newsletter Image" />
       </div>
   </div>
+  
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
 
     <div id="gallery-container">
         <h1>Photo Gallery</h1>
@@ -75,10 +83,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="Footer_section">
-        <div class="Footer_container">
-            <!-- Footer content goes here -->
-        </div>
+    <div class="footer">
     </div>
 
 </body>

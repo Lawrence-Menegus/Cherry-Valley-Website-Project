@@ -31,3 +31,37 @@ function prevSlide() {
 
 // Initial setup
 showSlide(currentSlide);
+
+
+// code for the image zoom 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the images and insert them inside the modal
+var upcomingImg = document.getElementById("upcomingImg");
+var newsletterImg = document.getElementById("newsletterImg");
+var modalImg = document.getElementById("modalImg");
+var captionText = document.getElementById("caption");
+
+// Click event for Upcoming Events image
+upcomingImg.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Click event for Newsletter image
+newsletterImg.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Close the modal when clicking on <span> (x)
+span.onclick = function() { 
+  modal.style.display = "none";
+};
