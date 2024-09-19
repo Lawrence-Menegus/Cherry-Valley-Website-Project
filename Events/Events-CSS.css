@@ -39,9 +39,9 @@ body {
 #navbar__logo {
   background-color: #1F3D1A;
   background-size: 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
   -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   display: flex;
@@ -262,7 +262,7 @@ body {
   align-items: center;
   padding: 20px;
   text-align: center;
-  margin-bottom: 60px; 
+  margin-bottom: 20px; 
 }
 
 .Events-section h1 {
@@ -289,14 +289,14 @@ body {
   background-color: #152a11;
   padding: 40px;
   border-radius: 8px;
-  width: 95%;
+  width: 100%;
   max-width: 1200px; 
   box-shadow: 0 4px 6px #152a11;
   color: white;
   position: relative;
   text-align: center;
   z-index: 1;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   border: 15px solid #DEC891;
 }
 
@@ -449,8 +449,8 @@ body {
 }
 .form-container {
   width: 100%;
-  max-width: 1200px; /* Optional max-width for larger screens */
-  margin: 0 auto; 
+  max-width: 1200px; 
+  margin: auto; 
 }
 
 .contact-form iframe {
