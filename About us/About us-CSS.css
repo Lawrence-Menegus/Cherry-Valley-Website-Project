@@ -278,13 +278,13 @@ body {
   flex: 1;
 }
 .history-goals__text p{
-  font-size: 2vw;
+  font-size: 20px;
   color: #152a11;
 }
 .history-goals__text ul {
   text-align: left;
   line-height: 1.6;
-  font-size: 1.8vw;
+  font-size: 18px;
   list-style-type: number;
   margin-left: 20px;
   color: #152a11;
