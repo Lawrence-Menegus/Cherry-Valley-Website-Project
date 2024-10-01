@@ -65,3 +65,18 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 };
+
+// Function to show the popup
+function showPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+// Show the popup when the page loads
+window.onload = function() {
+  showPopup();
+};

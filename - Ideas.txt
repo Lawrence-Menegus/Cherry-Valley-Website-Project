@@ -13,3 +13,7 @@
 - Social Media Platform Creation
 
 - Possible Formal Relationship with ESU
+
+
+- lazy loading 
+- change structure of picture 

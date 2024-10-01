@@ -226,6 +226,57 @@ body {
   }
 }
 
+/* Pop Up Contact Form */
+.popup {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+}
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1F3D1A; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #DEC891;
+  width: 80%; 
+  max-width: 800px; 
+  max-height: 55vh; 
+  text-align: center;
+  border: 15px solid #DEC891; 
+}
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  font-size: 60px; 
+  background-color: #DEC891; 
+  border: none;  
+  width: 50px; 
+  height: 50px; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.popup-content h2 {
+  font-size: 40px; 
+  color: #DEC891;
+}
+iframe {
+  width: 100%;
+  height: 60vh; 
+  border: none; 
+}
+
 
 /* Mission Section */
 .mission {
@@ -247,56 +298,82 @@ body {
 
 
 
-/* History & Goals Section */
+* History & Goals Section */
 .history-goals {
   display: flex;
   justify-content: center;
   padding: 50px 20px;
 }
+
 .history-goals__content {
   max-width: 1200px;
   width: 100%;
 }
+
 .history-goals__content h2 {
   text-align: center;
   font-size: 40px;
   margin-bottom: 40px;
   width: 100%;
   color: #152a11;
-
 }
+
 /* Container to hold text and image side-by-side */
 .history-goals__container {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
-  gap: 20px; /* Space between text and image */
-  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; 
+  gap: 20px;
+  justify-content: center; 
 }
+
 /* Text Section */
 .history-goals__text {
-  max-width: 60%; /* Set a fixed width for the text section */
+  max-width: 60%; 
   flex: 1;
 }
-.history-goals__text p{
+
+.history-goals__text p {
   font-size: 20px;
   color: #152a11;
+  margin-left: 20px;
 }
+
 .history-goals__text ul {
   text-align: left;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 16px;
   list-style-type: number;
   margin-left: 20px;
   color: #152a11;
-
+  margin-left: 30px;
 }
+
 /* Image Styling */
 .history-goals__container img {
-  max-width: 50%; /* Set the image width */
+  max-width: 50%; 
   height: auto;
   object-fit: cover;
   flex: 1;
   align-self: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 50em) { /* 50em is approximately 800px */
+  .history-goals__container {
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .history-goals__text {
+    max-width: 100%; /* Allow full width for text */
+  }
+  
+  .history-goals__container img {
+    max-width: 100%; /* Ensure the image is full width */
+    margin-bottom: 20px; /* Add space below the image */
+  }
 }
 
 
