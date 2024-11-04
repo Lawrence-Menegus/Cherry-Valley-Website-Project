@@ -331,6 +331,9 @@ iframe {
   border: none; 
 }
 
+
+
+
 /* Photo Gallery */
 #gallery-container {
   background-color: #152a11;
@@ -357,13 +360,13 @@ iframe {
   margin-bottom: 20px;
   color: #DEC891;
 }
-.slide {
+#slide {
   display: none;
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.slide img {
+#slide img {
   width: 100%;
   height: 100%;
   object-fit: contain; 
