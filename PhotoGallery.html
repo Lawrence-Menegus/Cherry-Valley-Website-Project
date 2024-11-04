@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="PhotoGallery/PhotoGallery.css" />
+</head>
+<body>
+
+    <!--Pop Up interest form-->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Interest Form</h2>
+            <!-- Contact Form -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf-kngweL09Kgm7Hw7g-I5LywSUYI61vRkQNPj1pNVDXxdYpQ/viewform?embedded=true" 
+                width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">Loading…
+            </iframe>
+        </div>
+    </div>
+
+     <!-- Volunteer interest form -->
+     <div class="vpopup" id="vpopup">
+      <div class="vpopup-content">
+          <span class="closed-btn" onclick="closedPopup()">&times;</span>
+          <h2>Volunteer/Service Hours Form</h2>
+          <!-- Contact Form -->
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpc6WzOvURxvYzfuAw4bUYi0pm8VW1zI9qa_5AoFP425gSFQ/viewform?embedded=true" 
+          width="640" height="1126" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+    
+    <!-- General Buttons Webpage -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="PhotoGallery/PhotoGallery/Cherry Valley logo .png" alt="FriendsOfCherryValleyLogo" class="navbar__logo-image" />
+                FRIENDS OF CHERRY VALLEY WILDLIFE REFUGE
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="Homepage-HTML.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="About us - HTML.html" class="navbar__links">About</a></li>
+                <li class="navbar__item"><a href="Events - HTML.html" class="navbar__links">Events</a></li>
+                <li class="navbar__item"><a href="Get Involved - HTML.html" class="navbar__links">Get Involved</a></li>
+                <li class="navbar__item"><a href="Partners.html" class="navbar__links">Partners</a></li>
+                <li class="navbar__item"><a href="PhotoGallery.html" class="navbar__links">Photo Gallery</a></li>
+                <!-- Volunteer button popup form -->
+                <li class="navbar__item">
+                  <a href="javascript:void(0);" class="navbar__links" onclick="openPopup()">Volunteer</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="PhotoGallery/PhotoGallery.js"></script>
+
+
+    <div id="gallery-container">
+        <h1>Photo Gallery</h1>
+        <div id="gallery">
+            <div class="slide active"><img src="PhotoGallery/PhotoGallery/181269_472304176188950_915168387_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="PhotoGallery/PhotoGallery/18557181_1348123688606990_5379030507452188914_n.jpg"alt="Newsletter Image"></div>
+            <div class="slide"><img src="PhotoGallery/PhotoGallery/18581875_1348123798606979_8230803409860624627_n.jpg"alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/18581875_1348123798606979_8230803409860624627_n.jpg"alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/18588825_1348122841940408_2656914535305109083_o.jpg"alt="Newsletter Image" ></div>
+            <div class="slide"><img src="Events/PhotoGallery/18620795_1348122991940393_4613895458357302639_o.jpg"alt="Newsletter Image" ></div>
+            <div class="slide"><img src="Events/PhotoGallery/18620837_1348124598606899_6445246499124947876_o.jpg"alt="Newsletter Image" ></div>
+            <div class="slide"><img src="Events/PhotoGallery/18620985_1348124155273610_3142350172319469557_o.jpg"alt="Newsletter Image" ></div>
+            <div class="slide"><img src="Events/PhotoGallery/18671473_1348124228606936_8227314827201761538_o.jpg"alt="Newsletter Image" ></div>
+            <div class="slide"><img src="Events/PhotoGallery/18698279_1348123151940377_1570942756719089641_n.jpg"alt="Newsletter Image" ></div> 
+            <div class="slide"><img src="Events/PhotoGallery/21994455_1465950183491006_8459437469967716836_o.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/280613373_5201922723227048_7034561324036857626_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/292517_265100170242686_339934085_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/295353_265085530244150_2116698258_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/306091_265106813575355_2095686685_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/319749_265106233575413_983782694_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/319789_265105760242127_2071102567_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/37580900_1776594425759912_1064734921098002432_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"><img src="Events/PhotoGallery/37595544_1776594779093210_6817901222486343680_n.jpg" alt="Newsletter Image"></div>
+            <div class="slide"> <img src="Events/PhotoGallery/37600687_1776219465797408_8735922042219528192_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/37644911_1776594315759923_9189593583655583744_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/380626_328161450603224_912883128_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/383473_265107236908646_1429481650_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/393136_265099380242765_189527559_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/398782_265095016909868_144678925_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/419144_472304146188953_1826872570_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/459007836_8307206696031953_8034865349357231490_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/465226_311530352266334_119158654_o.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/478847_265079763578060_1407800661_o.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/483433_265107706908599_1216567410_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/484630_328158467270189_499226144_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/553234_328160743936628_1676400131_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/67245782_2339321319487217_6990884857148604416_n.jpg" alt="Newsletter Image" > </div>
+            <div class="slide"> <img src="Events/PhotoGallery/575308_519315121487855_1187725400_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/67688116_2357922090960473_83966468902879232_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/69710885_2412888482130500_6843109201590353920_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/70947298_2460609970691684_7015710395184709632_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/73413134_2530224187063595_240261213567582208_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/8484_472304139522287_545340265_n.jpg" alt="Newsletter Image"> </div>
+            <div class="slide"> <img src="Events/PhotoGallery/996801_519315194821181_164361866_n.jpg" alt="Newsletter Image"> </div>
+
+            <button class="nav prev" onclick="prevSlide()">&#10094;</button>
+            <button class="nav next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <h2>Our Videos</h2>
+        <div class="video-gallery__carousel">
+            <button class="video-gallery__carousel-button" id="carousel-left">&lt;</button>
+            <div class="video-gallery__carousel-wrapper">
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 1</h3>
+                    <p>Short description for Video 1</p>
+                </div>
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 2</h3>
+                    <p>Short description for Video 2</p>
+                </div>
+                <!-- Add more videos as needed -->
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 2</h3>
+                    <p>Short description for Video 2</p>
+                </div>
+                <!-- Add more videos as needed -->
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 2</h3>
+                    <p>Short description for Video 2</p>
+                </div>
+                <!-- Add more videos as needed -->
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 2</h3>
+                    <p>Short description for Video 2</p>
+                </div>
+                <!-- Add more videos as needed -->
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 2</h3>
+                    <p>Short description for Video 2</p>
+                </div>
+                <!-- Add more videos as needed -->
+                <div class="video-gallery__item">
+                    <video controls>
+                        <source src="path/to/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Video Title 2</h3>
+                    <p>Short description for Video 2</p>
+                </div>
+                <!-- Add more videos as needed -->
+            </div>
+            <button class="video-gallery__carousel-button" id="carousel-right">&gt;</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer__social">
+            <img src="facebook.png" alt="Facebook" class="footer__facebook">
+            <a href="#">Follow Page</a> | <a href="#">Share</a>
+        </div>
+        
+        <div class="footer__contact">
+            <p>Cherry Valley National Wildlife Refuge Headquarters</p>
+            <p>2138 Croasdale Rd</p>
+            <p>Stroudsburg, PA 18360</p>
+            <p>E: friendsofcherryvalley@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

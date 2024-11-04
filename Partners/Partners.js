@@ -6,27 +6,22 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let slideIndex = 0;
-  showSlides();
+// Function to show the popup
+function showPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
 
-  function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides_fade");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 10000); // Change image every 10 seconds
-  }
-});
+// Function to close the popup
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
 
+// Show the popup when the page loads
+window.onload = function() {
+  showPopup();
+};
 
-// Function to open the popup Volunteer 
+// Function to open the popup
 function openPopup() {
   document.getElementById("vpopup").style.display = "block"; // Show the popup
 }

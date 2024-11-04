@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Heading for Webpage -->
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Us</title>
     <link rel="stylesheet" href="About us/About us-CSS.css" />
-  </head>
-  <body>
+</head>
+<body>
 
     <!--Pop Up interest form-->
     <div class="popup" id="popup">
-      <div class="popup-content">
-          <span class="close-btn" onclick="closePopup()">&times;</span>
-          <h2>Interest Form</h2>
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Interest Form</h2>
+            <!-- Contact Form -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf-kngweL09Kgm7Hw7g-I5LywSUYI61vRkQNPj1pNVDXxdYpQ/viewform?embedded=true" 
+                width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">Loading…
+            </iframe>
+        </div>
+    </div>
+
+     <!-- Volunteer interest form -->
+     <div class="vpopup" id="vpopup">
+      <div class="vpopup-content">
+          <span class="closed-btn" onclick="closedPopup()">&times;</span>
+          <h2>Volunteer/Service Hours Form</h2>
           <!-- Contact Form -->
-          <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSf-kngweL09Kgm7Hw7g-I5LywSUYI61vRkQNPj1pNVDXxdYpQ/viewform?embedded=true" 
-          width="100%" height="100%" frameborder="0" scrolling = "no" marginheight="0" marginwidth="0">Loading…
-        </iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpc6WzOvURxvYzfuAw4bUYi0pm8VW1zI9qa_5AoFP425gSFQ/viewform?embedded=true" 
+          width="640" height="1126" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
-  </div>
+    </div>
     
     <!-- General Buttons Webpage -->
     <!-- Navigation Bar -->
     <nav class="navbar">
-      <div class="navbar__container">
-          <a href="/" id="navbar__logo">
-              <img src="Events/Events images/Cherry Valley logo .png" alt="FriendsOfCherryValleyLogo" class="navbar__logo-image" />
-              FRIENDS OF CHERRY VALLEY WILDLIFE REFUGE
-          </a>
-          <div class="navbar__toggle" id="mobile-menu">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-          </div>
-          <ul class="navbar__menu">
-              <li class="navbar__item"><a href="Homepage-HTML.html" class="navbar__links">Home</a></li>
-              <li class="navbar__item"><a href="About us - HTML.html" class="navbar__links">About</a></li>
-              <li class="navbar__item"><a href="Events - HTML.html" class="navbar__links">Events</a></li>
-              <li class="navbar__item"><a href="Get Involved - HTML.html" class="navbar__links">Get Involved</a></li>
-              <li class="navbar__item"><a href="  " class="navbar__links"><img src=" " alt="Clickable Image"></a>
-          </ul>
-      </div>
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="About us/About Us images/Cherry Valley logo .png" alt="FriendsOfCherryValleyLogo" class="navbar__logo-image" />
+                FRIENDS OF CHERRY VALLEY WILDLIFE REFUGE
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="Homepage-HTML.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="About us - HTML.html" class="navbar__links">About</a></li>
+                <li class="navbar__item"><a href="Events - HTML.html" class="navbar__links">Events</a></li>
+                <li class="navbar__item"><a href="Get Involved - HTML.html" class="navbar__links">Get Involved</a></li>
+                <li class="navbar__item"><a href="Partners.html" class="navbar__links">Partners</a></li>
+                <li class="navbar__item"><a href="PhotoGallery.html" class="navbar__links">Photo Gallery</a></li>
+                <!-- Volunteer button popup form -->
+                <li class="navbar__item">
+                  <a href="javascript:void(0);" class="navbar__links" onclick="openPopup()">Volunteer</a>
+              </li>
+            </ul>
+        </div>
     </nav>
+
     <script src="About us/About us - Js.js"></script>
-
-      <!-- Mission Section -->
-      <section class="mission">
-        <h1>Mission</h1>
-        <p>The Friends of Cherry Valley National Wildlife Refuge are dedicated to the conservation and enhancement of the natural and cultural resources, rural character, and scenic beauty of the Cherry Valley Area.</p>
-    </section>
-
     <!-- Our History & Goals Section -->
     <section class="history-goals">
       <div class="history-goals__content">
           <h2>Our History & Our Goals</h2>
           <div class="history-goals__container">
-              <div class="history-goals__text">
-                  <p>Established in 2002, we are a 501(c)3 non-profit organization formed by concerned residents and conservationists. Since our establishment, we strive to meet the following goals:</p>
+
+              <!-- History Section -->
+              <div class="history-goals__history">
+                  <h3>Our History</h3>
+                  <p>Established in 2002, Friends of Cherry Valley is a 501(c)(3) non-profit organization located in Stroudsburg, Pennsylvania, formed by a passionate group of concerned residents and conservationists dedicated to preserving the natural beauty and ecological integrity of the Cherry Valley area.</p>
+                  <p>Over the years, we have partnered with local governments, environmental agencies, and community organizations to promote conservation initiatives, organize educational programs, and host events that celebrate the natural resources of Cherry Valley. Through volunteer efforts and community involvement, we have successfully contributed to the establishment of protected lands and the restoration of critical habitats.</p>
+                  <p>Today, Friends of Cherry Valley continues to serve as a vital voice for the community, fostering a deeper connection between residents and their natural surroundings while inspiring future generations to appreciate and protect the environment. Our commitment to conservation and land preservation remains strong as we look to the future, working towards a sustainable and thriving Cherry Valley for all.</p>
+              </div>
+
+              <!-- Image Section -->
+              <img id="Board_Img" src="About us/About Us images/292517_265100170242686_339934085_n.jpg" class="history-goals__image" alt="Image of Friends of Cherry Valley" />
+
+              <!-- Goals Section -->
+              <div class="history-goals__goals">
+                  <h3>Our Goals</h3>
                   <ul>
                       <li>Improve connections and communications with homeowners, landowners, and the community regarding conservation and land preservation.</li>
                       <li>Protect open space and environmentally sensitive areas.</li>
@@ -66,7 +88,7 @@
                       <li>Provide support to and community involvement in the Cherry Valley National Wildlife Refuge.</li>
                   </ul>
               </div>
-              <img id="Board_Img" src="About us/About Us images/292517_265100170242686_339934085_n.jpg" class="Image" alt="Image" />
+
           </div>
       </div>
   </section>
@@ -166,41 +188,21 @@
       </div>        
     </section>
 
-<!-- Partners Section -->
-<section class="partners">
-  <h2>Partners</h2>
-  <div class="partners__list">
-      <ul>
-          <li><a href="#http://www.apwc-pa.com/" target="_blank">Aquashicola/Pohoopoco Watershed Conservancy</a></li>
-          <li><a href="#http://www.brodheadwatershed.org/" target="_blank">Brodhead Watershed Association</a></li>
-          <li><a href="#http://www.brodheadwatershed.org/CherryCreek/3.htm" target="_blank">Cherry Creek Watershed Sub-Association</a></li>
-          <li><a href="#https://www.closetheloop.com/" target="_blank">Close the Loop</a></li>
-          <li><a href="#https://www.mcconservation.org/" target="_blank">Monroe County Conservation District</a></li>
-          <li><a href="#https://www.nwf.org/" target="_blank">National Wildlife Federation</a></li>
-          <li><a href="#https://hamiltontwp.org/" target="_blank">Hamilton Township</a></li>
-          <li><a href="#https://www.nfwf.org/" target="_blank">National Fish and Wildlife Foundation</a></li>
-          <li><a href="#https://www.refugeassociation.org/" target="_blank">National Wildlife Refuge Association</a></li>
-          <li><a href="#https://amwater.com/paaw/" target="_blank">PA American Water</a></li>
-          <li><a href="#https://www.lvaudubon.org/" target="_blank">PA Audubon Society - Lehigh Valley</a></li>
-          <li><a href="#https://www.ross.pa.us/" target="_blank">Ross Township</a></li>
-          <li><a href="#https://www.meaincpa.com/remediation?dxmclid=FH8FRkkn8oJ6wFrgy_KosHnmkW1XO8zs" target="_blank">MEA Environmental Services, Inc.</a></li>
-          <!-- Add more partners as needed -->
-      </ul>
-      <ul>
-          <li><a href="#https://www.fishandboat.com/Pages/default.aspx" target="_blank">PA Fish & Boath Commission</a></li>
-          <li><a href="#https://www.poconoavianresearch.org/" target="_blank">Pocono Avian Research Center</a></li>
-          <li><a href="#http://www.phlt.org/" target="_blank">Pocono Heritage Land Trust</a></li>
-          <li><a href="#https://www.pnercd.org/" target="_blank">Pocono NE Resource, Conservation, and Development Council</a></li>
-          <li><a href="#http://www.poconowildlife.com/wp/" target="_blank">Pocono Wildlife Rehabilitation Center</a></li>
-          <li><a href="#https://www.stroudtownship.org/" target="_blank">Stroud Township</a></li>
-          <li><a href="#https://www.conservationfund.org/" target="_blank">The Conservation Fund</a></li>
-          <li><a href="#https://www.nature.org/en-us/" target="_blank">The Nature Conservancy</a></li>
-          <li><a href="#http://www.brodheadstu.org/" target="_blank">Trout Unlimited - Broadhead Chapter</a></li>
-          <li><a href="#https://www.fws.gov/" target="_blank">US Fish and Wildlife Service</a></li>
-          <!-- Add more partners as needed -->
-      </ul>
+    <div class="container">
+      <div class="map">
+          <!-- Google Maps iframe (replace with your actual Google Maps embed link) -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.483003425933!2d-75.1719437!3d40.970903299999996!2m3!1f0!2f0!3f0!3m2
+          !1i1024!2i768!4f13.1!3m3!1m2!1s0x89c489f1f668dceb%3A0xcdf75d8a3871d4c8!2sCherry%20Valley%20National%20Wildlife%20Refuge!5e0!3m2!1sen!2sus!4v1730740985373!5m2!1sen!2sus" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+      </div>
+      <div class="Address">
+          <h1>Address</h1>
+          <h2>Cherry Valley National Wildlife Refuge Headquarters</h2>
+          <p>2138 Croasdale Rd</p>
+          <p>Stroudsburg, PA 18360</p>
+          <p><a href="friendsofcherryvalley@gmail.com">E: friendsofcherryvalley@gmail.com</a></p>
+      </div>
   </div>
-</section>
 
     <!-- Footer Section -->
     <footer class="footer">
