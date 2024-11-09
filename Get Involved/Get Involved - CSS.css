@@ -8,9 +8,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Scheherazade New', sans-serif;
+  font-family: "Scheherazade New", sans-serif;
 }
-
 
 .navbar {
   background: #ffffff;
@@ -37,7 +36,7 @@ body {
 }
 
 #navbar__logo {
-  background-color: #1F3D1A;
+  background-color: #1f3d1a;
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -74,12 +73,12 @@ body {
 }
 
 .navbar__links {
-  color: #1F3D1A;
+  color: #1f3d1a;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   height: 100%;
   white-space: nowrap;
 }
@@ -101,7 +100,7 @@ body {
   outline: none;
   border-radius: 4px;
   background: #fff;
-  color: #1F3D1A;
+  color: #1f3d1a;
 }
 
 .image-container {
@@ -109,7 +108,6 @@ body {
   width: 100%;
   height: 600px; /* Set a fixed height for consistency */
   overflow: hidden; /* Hide any overflow if the image exceeds the container */
-
 }
 
 .image-container img {
@@ -117,7 +115,6 @@ body {
   height: 100%;
   object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
 }
-
 
 @media screen and (max-width: 960px) {
   .navbar__container {
@@ -163,7 +160,7 @@ body {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: #1F3D1A;
+    background: #1f3d1a;
   }
 
   #mobile-menu.is-active .bar:nth-child(2) {
@@ -207,13 +204,13 @@ body {
     height: 600px; /* Set a fixed height for consistency */
     overflow: hidden; /* Hide any overflow if the image exceeds the container */
   }
-  
+
   .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
   }
-  
+
   .overlay {
     position: absolute;
     top: 20%; /* Aligns overlay to the bottom of the image */
@@ -228,21 +225,26 @@ body {
     text-align: center;
     padding: 20px;
   }
-  
-  .leaves_container{
+
+  .leaves_container {
     width: 100%;
     height: 450px;
     object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
     overflow: hidden;
   }
-  
+
   .overlay_leaves {
     position: absolute;
     top: 700px; /* Aligns overlay to the bottom of the image */
     width: 100%;
     height: 450px; /* Makes overlay 50% of the image height */
-    background: rgba(222, 200, 145, 0.55); /* Adds a background color with 45% opacity */
-    color: #1F3D1A;
+    background: rgba(
+      222,
+      200,
+      145,
+      0.55
+    ); /* Adds a background color with 45% opacity */
+    color: #1f3d1a;
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -250,8 +252,8 @@ body {
     text-align: center;
     padding: 10px;
   }
-  
 }
+
 /* GetInvoled Title and Description */
 .DonationsMembershipsSection {
   background-color: #1f3d1a;
@@ -308,6 +310,8 @@ body {
   transition: background-color 0.3s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  margin-top: auto; /* Ensures the button is at the bottom */
 }
 
 .customPaypalButton:hover {
@@ -327,7 +331,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
 }
 
-/* Subsciption Container */
+/* Subscription Container */
 .subscriptionContainer {
   display: flex;
   flex-wrap: wrap;
@@ -336,17 +340,32 @@ body {
   padding: 20px;
 }
 
+/* Subscription Box */
 .subscriptionBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced out */
+  position: relative;
   background-color: #fff;
   border: 3px solid #1f3d1a;
   border-radius: 10px;
   padding: 20px;
   width: 15%;
-  height: 400px;
+  height: 520px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
   min-height: 250px;
+}
+
+.subscriptionBox:hover .donationButton {
+  display: block; /* Show the button when the box is hovered */
+}
+
+/* Hide the button by default */
+.subscriptionBox .donationButton {
+  display: none;
+  margin-top: auto; /* Pushes the button to the bottom */
 }
 
 .subscriptionBox:hover {
@@ -354,9 +373,10 @@ body {
 }
 
 .subscriptionBox h3 {
-  font-size: 24px;
+  font-size: 20px;
   color: black;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .subscriptionBox p {
@@ -366,7 +386,7 @@ body {
 }
 
 .subscriptionBox:hover h3 {
-  font-size: 28px;
+  font-size: 22px;
   color: #ffb10f;
 }
 
@@ -445,7 +465,7 @@ body {
 
 /* Pop Up Contact Form */
 .vpopup {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -453,50 +473,49 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  
 }
 .vpopup-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1F3D1A; 
+  background-color: #1f3d1a;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 5px #DEC891;
-  width: 80%; 
-  max-width: 800px; 
-  max-height: 75vh; 
+  box-shadow: 0 0 5px #dec891;
+  width: 80%;
+  max-width: 800px;
+  max-height: 75vh;
   text-align: center;
-  border: 15px solid #DEC891; 
+  border: 15px solid #dec891;
 }
 .closed-btn {
   cursor: pointer;
   position: absolute;
   right: 40px;
-  font-size: 60px; 
-  background-color: #DEC891; 
-  border: none;  
-  width: 50px; 
-  height: 50px; 
-  display: flex; 
+  font-size: 60px;
+  background-color: #dec891;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .vpopup-content h2 {
-  font-size: 40px; 
-  color: #DEC891;
+  font-size: 40px;
+  color: #dec891;
 }
 iframe {
   width: 100%;
-  height: 60vh; 
-  border: none; 
+  height: 60vh;
+  border: none;
 }
 
 /* Pop Up Contact Form */
 .popup {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -504,43 +523,62 @@ iframe {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  
 }
 .popup-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1F3D1A; 
+  background-color: #1f3d1a;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 5px #DEC891;
-  width: 80%; 
-  max-width: 800px; 
-  max-height: 55vh; 
+  box-shadow: 0 0 5px #dec891;
+  width: 80%;
+  max-width: 800px;
+  max-height: 55vh;
   text-align: center;
-  border: 15px solid #DEC891; 
+  border: 15px solid #dec891;
 }
 .close-btn {
   cursor: pointer;
   position: absolute;
   right: 40px;
-  font-size: 60px; 
-  background-color: #DEC891; 
-  border: none;  
-  width: 50px; 
-  height: 50px; 
-  display: flex; 
+  font-size: 60px;
+  background-color: #dec891;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .popup-content h2 {
-  font-size: 40px; 
-  color: #DEC891;
+  font-size: 40px;
+  color: #dec891;
 }
 iframe {
   width: 100%;
-  height: 60vh; 
-  border: none; 
+  height: 60vh;
+  border: none;
+}
+
+.footer {
+  background-color: #091f05;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer__facebook {
+  width: 30px;
+  margin-right: 10px;
+}
+.footer__contact p {
+  margin: 5px 0;
 }
