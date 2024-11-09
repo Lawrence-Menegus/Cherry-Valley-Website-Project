@@ -27,6 +27,23 @@
     </div>
   </div>
 
+  <div class="vpopup" id="vpopup">
+    <div class="vpopup-content">
+      <span class="closed-btn" onclick="closedPopup()">&times;</span>
+      <h2>Volunteer/Service Hours Form</h2>
+      <!-- Contact Form -->
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfpc6WzOvURxvYzfuAw4bUYi0pm8VW1zI9qa_5AoFP425gSFQ/viewform?embedded=true"
+        width="640"
+        height="1126"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
+    </div>
+  </div>
+
   <body>
     <!-- General Buttons Webpage -->
     <!-- Navigation Bar -->
@@ -61,9 +78,19 @@
             >
           </li>
           <li class="navbar__item">
-            <a href="  " class="navbar__links"
-              ><img src=" " alt="Clickable Image"
-            /></a>
+            <a href="Partners.html" class="navbar__links">Partners</a>
+          </li>
+          <li class="navbar__item">
+            <a href="PhotoGallery.html" class="navbar__links">Photo Gallery</a>
+          </li>
+          <!-- Volunteer button popup form -->
+          <li class="navbar__item">
+            <a
+              href="javascript:void(0);"
+              class="navbar__links"
+              onclick="openPopup()"
+              >Volunteer</a
+            >
           </li>
         </ul>
       </div>
