@@ -582,3 +582,53 @@ iframe {
 .footer__contact p {
   margin: 5px 0;
 }
+
+/* Pop Up Contact Form */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1f3d1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #dec891;
+  width: 80%;
+  max-width: 800px;
+  max-height: 75vh;
+  text-align: center;
+  border: 15px solid #dec891;
+}
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  font-size: 60px;
+  background-color: #dec891;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.popup-content h2 {
+  font-size: 40px;
+  color: #dec891;
+}
+iframe {
+  width: 100%;
+  height: 60vh;
+  border: none;
+}

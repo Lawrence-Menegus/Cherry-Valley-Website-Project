@@ -6,6 +6,16 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
+// Show the popup when the page loads
+window.onload = function () {
+  document.getElementById("popup").style.display = "block";
+};
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
 // Function to open the popup
 function openPopup() {
   document.getElementById("vpopup").style.display = "block"; // Show the popup
@@ -17,9 +27,9 @@ function closedPopup() {
 }
 
 // Close the popup when clicking outside of the content
-window.onclick = function(event) {
+window.onclick = function (event) {
   const popup = document.getElementById("vpopup");
   if (event.target === popup) {
-      closedPopup();
+    closedPopup();
   }
 };
