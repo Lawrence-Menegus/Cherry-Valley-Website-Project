@@ -563,25 +563,6 @@ iframe {
   border: none;
 }
 
-.footer {
-  background-color: #091f05;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
-.footer__social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.footer__facebook {
-  width: 30px;
-  margin-right: 10px;
-}
-.footer__contact p {
-  margin: 5px 0;
-}
 
 /* Pop Up Contact Form */
 .popup {
@@ -632,3 +613,101 @@ iframe {
   height: 60vh;
   border: none;
 }
+
+
+/* Footer Section */
+.footer {
+  background-color: #091f05;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer__contact {
+  flex: 1 1 50%; /* Takes up half of the footer */
+}
+
+.footer__contact h2 {
+  color: #dec891;
+  font-size: 24px; /* Base font size */
+}
+
+.footer__contact p {
+  margin: 5px 0;
+  color: #ffffff;
+  font-size: 16px; /* Base font size for paragraph text */
+}
+
+/* Social Media Section */
+.footer__social {
+  flex: 1 1 50%; /* Takes up half of the footer */
+  text-align: center;
+}
+
+.footer__social h2 {
+  color: #dec891;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.footer__social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer__social-icons a {
+  display: inline-block;
+}
+
+.footer__social img {
+  width: 60px; /* Base width for small screens */
+  height: 60px; /* Base height for small screens */
+  object-fit: cover; /* Crop the image to fit within the dimensions */
+  cursor: pointer;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+  border-radius: 50%; /* Optional: Make them circular if desired */
+}
+
+.footer__social img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .footer__contact h2,
+  .footer__social h2 {
+    font-size: 36px; /* Increase font size on medium screens */
+  }
+  .footer__contact p {
+    font-size: 18px; /* Increase paragraph font size */
+  }
+  .footer__social img {
+    width: 80px; /* Increase icon size on medium screens */
+    height: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__contact h2,
+  .footer__social h2 {
+    font-size: 50px; /* Increase font size on large screens */
+  }
+  .footer__contact p {
+    font-size: 35px; /* Increase paragraph font size */
+  }
+  .footer__social img {
+    width: 150px; /* Increase icon size on large screens */
+    height: 150px;
+  }
+}
+
