@@ -89,18 +89,27 @@ body {
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 20px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  background: #fff;
-  color: #1f3d1a;
+  .button {
+    background-color: #1f3d1a;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: "Verdana", sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-decoration: none; /* Add this line to remove underline */
+  }
+
+  .button:hover {
+    background-color: #ffb10f;
+  }
 }
 
 .image-container {
@@ -198,13 +207,6 @@ body {
   padding: 10px;
 }
 
-.footer {
-  top: 1750px;
-  width: 100%;
-  height: 300px;
-  background-color: #1f3d1a;
-}
-
 @media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
@@ -217,27 +219,35 @@ body {
   }
 
   .navbar__menu {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex; /* Use flexbox for easy vertical alignment */
+    flex-direction: column; /* Stack the links vertically */
+    justify-content: center; /* Vertically center the links */
+    align-items: center; /* Horizontally center the links */
     margin: 0;
     width: 100%;
     position: absolute;
     top: -1000px;
     opacity: 0;
     transition: all 0.5s ease;
-    height: 50vh;
-    z-index: -1;
     background: #ffffff;
+    height: 0; /* Set initial height to 0 */
+    overflow: hidden; /* Hide the overflow when inactive */
   }
 
   .navbar__menu.active {
-    background: #ffffff;
-    top: 100%;
+    top: 100%; /* Position the menu below the navbar */
     opacity: 1;
+    height: 70vh; /* Adjust height for the dropdown */
     transition: all 0.5s ease;
     z-index: 99;
-    height: 80vh;
-    font-size: 1.6rem;
+  }
+
+  .navbar__menu a {
+    padding: 1rem 2rem; /* Adjust padding to make links closer */
+    margin: 0; /* Remove any margin between links */
+    font-size: 1.6rem; /* Adjust font size as needed */
+    text-align: center;
+    width: 100%;
   }
 
   #navbar__logo {
@@ -270,9 +280,12 @@ body {
 
   .navbar__links {
     text-align: center;
-    padding: 2rem;
+    padding: 0;
     width: 100%;
-    display: table;
+    display: flex;
+    flex-direction: column; /* Stack the links vertically */
+    gap: 0; /* Remove space between links */
+    margin: 0;
   }
 
   #mobile-menu {
@@ -657,6 +670,72 @@ iframe {
   height: 60vh;
   border: none;
 }
+/* Footer Section */
+.footer {
+  background-color: #091f05;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer__contact {
+  flex: 1 1 50%; /* Takes up half of the footer */
+}
+
+.footer__contact h2 {
+  color: #dec891;
+  font-size: 24px; /* Base font size */
+}
+
+.footer__contact p {
+  margin: 5px 0;
+  color: #ffffff;
+  font-size: 16px; /* Base font size for paragraph text */
+}
+
+/* Social Media Section */
+.footer__social {
+  flex: 1 1 50%; /* Takes up half of the footer */
+  text-align: center;
+}
+
+.footer__social h2 {
+  color: #dec891;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.footer__social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer__social-icons a {
+  display: inline-block;
+}
+
+.footer__social img {
+  width: 60px; /* Base width for smalls */
+  height: 60px; /* Base height for small screens */
+  object-fit: cover; /* Crop the image to fit within the dimensions */
+  cursor: pointer;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+  border-radius: 50%; /* Optional: Make them circular if desired */
+}
+
+.footer__social img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
 
 /* Responsive Styling */
 @media (min-width: 768px) {
@@ -684,5 +763,103 @@ iframe {
   .footer__social img {
     width: 150px; /* Increase icon size on large screens */
     height: 150px;
+  }
+}
+
+/* General styles for the sections */
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Increased space between sections */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px; /* Added more padding for a spacious look */
+}
+
+/* Section styling */
+.section {
+  background-color: #ffffff;
+  padding: 50px; /* Increased padding to make sections taller */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-10px); /* Hover effect to lift the section */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Header styling */
+.section h2 {
+  color: #1f3d1a;
+  font-size: 4rem; /* Larger header font size */
+  margin-bottom: 15px;
+  margin-left: 20px;
+  text-align: left; /* Align header to the left */
+  font-weight: 600; /* Slightly bolder header */
+}
+
+/* Description styling */
+.section p {
+  color: #555;
+  font-size: 2rem; /* Slightly larger description text */
+  margin-bottom: 25px; /* Increased space between description and button */
+  text-align: left; /* Align description to the left */
+}
+
+/* Container for text and button (Flexbox for alignment) */
+.text-button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  margin-right: 60px;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.button {
+  background-color: #1f3d1a;
+  border: none;
+  color: #fff;
+  padding: 18px 36px; /* Bigger button with more padding */
+  font-size: 18px; /* Larger font size */
+  font-family: "Verdana", sans-serif;
+  border-radius: 12px; /* Larger border radius for a softer button */
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove underline */
+}
+
+.button:hover {
+  background-color: #ffb10f; /* Hover color change */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+@media (max-width: 768px) {
+  .sections-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .section h2 {
+    font-size: 2.5rem; /* Smaller header font size on mobile */
+  }
+
+  .section p {
+    font-size: 1.2rem; /* Smaller description font on mobile */
+  }
+
+  .button {
+    padding: 15px 30px; /* Adjusted button padding for mobile */
+    font-size: 16px; /* Adjusted button font size for mobile */
+  }
+
+  .text-button-container {
+    flex-direction: column; /* Stack the description and button vertically on mobile */
+    align-items: center;
   }
 }

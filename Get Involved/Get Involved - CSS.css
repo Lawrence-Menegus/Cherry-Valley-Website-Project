@@ -117,594 +117,606 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  .navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0;
+  @media screen and (max-width: 960px) {
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+
+    .navbar__menu {
+      display: flex; /* Use flexbox for easy vertical alignment */
+      flex-direction: column; /* Stack the links vertically */
+      justify-content: center; /* Vertically center the links */
+      align-items: center; /* Horizontally center the links */
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 0;
+      transition: all 0.5s ease;
+      background: #ffffff;
+      height: 0; /* Set initial height to 0 */
+      overflow: hidden; /* Hide the overflow when inactive */
+    }
+
+    .navbar__menu.active {
+      top: 100%; /* Position the menu below the navbar */
+      opacity: 1;
+      height: 70vh; /* Adjust height for the dropdown */
+      transition: all 0.5s ease;
+      z-index: 99;
+    }
+
+    .navbar__menu a {
+      padding: 1rem 2rem; /* Adjust padding to make links closer */
+      margin: 0; /* Remove any margin between links */
+      font-size: 1.6rem; /* Adjust font size as needed */
+      text-align: center;
+      width: 100%;
+    }
+
+    #navbar__logo {
+      padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #1f3d1a;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar__items {
+      width: 100%;
+    }
+
+    .navbar__links {
+      text-align: center;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column; /* Stack the links vertically */
+      gap: 0; /* Remove space between links */
+      margin: 0;
+    }
+
+    #mobile-menu {
+      position: absolute;
+      top: 30%;
+      right: 5%;
+      transform: translate(5%, 20%);
+    }
+
+    .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 600px; /* Set a fixed height for consistency */
+      overflow: hidden; /* Hide any overflow if the image exceeds the container */
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 20%; /* Aligns overlay to the bottom of the image */
+      left: 60%;
+      width: 35%;
+      height: auto; /* Makes overlay 50% of the image height */
+      background: rgba(0, 0, 0, 0.65); /* Adds a transparent black background */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .leaves_container {
+      width: 100%;
+      height: 450px;
+      object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
+      overflow: hidden;
+    }
+
+    .overlay_leaves {
+      position: absolute;
+      top: 700px; /* Aligns overlay to the bottom of the image */
+      width: 100%;
+      height: 450px; /* Makes overlay 50% of the image height */
+      background: rgba(
+        222,
+        200,
+        145,
+        0.55
+      ); /* Adds a background color with 45% opacity */
+      color: #1f3d1a;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+    }
   }
 
-  .navbar__menu {
-    display: grid;
-    grid-template-columns: auto;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    top: -1000px;
-    opacity: 0;
-    transition: all 0.5s ease;
-    height: 50vh;
-    z-index: -1;
-    background: #ffffff;
+  /* GetInvoled Title and Description */
+  .DonationsMembershipsSection {
+    background-color: #1f3d1a;
+    line-height: 70px;
+    padding: 35px;
   }
 
-  .navbar__menu.active {
-    background: #ffffff;
-    top: 100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 99;
-    height: 80vh;
-    font-size: 1.6rem;
-  }
-
-  #navbar__logo {
-    padding-left: 25px;
-  }
-
-  .navbar__toggle .bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background: #1f3d1a;
-  }
-
-  #mobile-menu.is-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  #mobile-menu.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  #mobile-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .navbar__items {
-    width: 100%;
-  }
-
-  .navbar__links {
+  .GetInvolvedOpeningText h1 {
+    font-size: 4em;
     text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
+    color: #dec891;
   }
-
-  #mobile-menu {
-    position: absolute;
-    top: 30%;
-    right: 5%;
-    transform: translate(5%, 20%);
-  }
-
-  .navbar__toggle .bar {
+  .GetInvolvedOpeningText::after {
+    content: "";
     display: block;
-    cursor: pointer;
+    width: 250px;
+    height: 3px;
+    background-color: #dec891;
+    margin: 10px auto 0;
+    border-radius: 5px;
   }
 
-  .image-container {
-    position: relative;
-    width: 100%;
-    height: 600px; /* Set a fixed height for consistency */
-    overflow: hidden; /* Hide any overflow if the image exceeds the container */
-  }
-
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
-  }
-
-  .overlay {
-    position: absolute;
-    top: 20%; /* Aligns overlay to the bottom of the image */
-    left: 60%;
-    width: 35%;
-    height: auto; /* Makes overlay 50% of the image height */
-    background: rgba(0, 0, 0, 0.65); /* Adds a transparent black background */
+  .GetInvolvedParagraphText {
+    font-size: 1.5em;
+    text-align: center;
     color: white;
-    display: flex;
+    text-decoration: none;
+    max-width: 800px;
+    margin: 10px auto;
+  }
+
+  /* PayPal Donate Button */
+  .PaymentOptionsSection {
+    padding-top: 60px;
+    text-align: center;
+    font-size: xx-large;
+    color: #1f3d1a;
+  }
+
+  .donationButton {
+    text-align: center;
+  }
+
+  .customPaypalButton {
+    background-color: #1f3d1a;
+    border: none;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-family: "Verdana", sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    margin-top: auto; /* Ensures the button is at the bottom */
+  }
+
+  .customPaypalButton:hover {
+    background-color: #3e8e41;
+    color: #ffb10f;
+    transform: scale(1.05);
+  }
+
+  .customPaypalButton::before {
+    content: "🌿";
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .customPaypalButton:active {
+    background-color: #ffb10f;
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+  }
+
+  /* Subscription Container */
+  .subscriptionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
     padding: 20px;
   }
 
-  .leaves_container {
-    width: 100%;
-    height: 450px;
-    object-fit: cover; /* Ensures images cover the container while maintaining aspect ratio */
-    overflow: hidden;
+  /* Subscription Box */
+  .subscriptionBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced out */
+    position: relative;
+    background-color: #fff;
+    border: 3px solid #1f3d1a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 15%;
+    height: 520px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    min-height: 250px;
   }
 
-  .overlay_leaves {
-    position: absolute;
-    top: 700px; /* Aligns overlay to the bottom of the image */
-    width: 100%;
-    height: 450px; /* Makes overlay 50% of the image height */
-    background: rgba(
-      222,
-      200,
-      145,
-      0.55
-    ); /* Adds a background color with 45% opacity */
-    color: #1f3d1a;
-    font-size: 30px;
+  .subscriptionBox:hover .donationButton {
+    display: block; /* Show the button when the box is hovered */
+  }
+
+  /* Hide the button by default */
+  .subscriptionBox .donationButton {
+    display: none;
+    margin-top: auto; /* Pushes the button to the bottom */
+  }
+
+  .subscriptionBox:hover {
+    transform: scale(1.05);
+  }
+
+  .subscriptionBox h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .subscriptionBox p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .subscriptionBox:hover h3 {
+    font-size: 22px;
+    color: #ffb10f;
+  }
+
+  /* Mail Donation and imgs boxes  */
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px auto;
+    max-width: 1200px;
+    gap: 20px;
+  }
+
+  .big-rectangle {
+    flex: 1;
+    background-color: #1f3d1a;
+    border: 5px solid #dec891;
+    color: white;
+    font-size: 1.5em;
+    padding: 30px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-section h1 {
+    text-decoration: underline;
+    text-decoration-color: #dec891;
+    text-align: center;
+  }
+
+  .content-section p2 {
+    font-size: 1.35em;
+    text-decoration: underline;
+    text-decoration-color: #dec891;
+    text-align: center;
+  }
+
+  .big-rectangle p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .right-rectangles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-rectangle {
+    background-color: #f4f4f4;
+    border: 3px solid #dec891;
+    padding: 10px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .image-rectangle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  body {
+    background: linear-gradient(to bottom, #ffffff, #152a11);
+  }
+
+  /* Pop Up Contact Form */
+  .vpopup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .vpopup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f3d1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #dec891;
+    width: 80%;
+    max-width: 800px;
+    max-height: 75vh;
     text-align: center;
-    padding: 10px;
+    border: 15px solid #dec891;
   }
-}
-
-/* GetInvoled Title and Description */
-.DonationsMembershipsSection {
-  background-color: #1f3d1a;
-  line-height: 70px;
-  padding: 35px;
-}
-
-.GetInvolvedOpeningText h1 {
-  font-size: 4em;
-  text-align: center;
-  color: #dec891;
-}
-.GetInvolvedOpeningText::after {
-  content: "";
-  display: block;
-  width: 250px;
-  height: 3px;
-  background-color: #dec891;
-  margin: 10px auto 0;
-  border-radius: 5px;
-}
-
-.GetInvolvedParagraphText {
-  font-size: 1.5em;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  max-width: 800px;
-  margin: 10px auto;
-}
-
-/* PayPal Donate Button */
-.PaymentOptionsSection {
-  padding-top: 60px;
-  text-align: center;
-  font-size: xx-large;
-  color: #1f3d1a;
-}
-
-.donationButton {
-  text-align: center;
-}
-
-.customPaypalButton {
-  background-color: #1f3d1a;
-  border: none;
-  color: #fff;
-  padding: 14px 28px;
-  font-size: 18px;
-  font-family: "Verdana", sans-serif;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto; /* Ensures the button is at the bottom */
-}
-
-.customPaypalButton:hover {
-  background-color: #3e8e41;
-  color: #ffb10f;
-  transform: scale(1.05);
-}
-
-.customPaypalButton::before {
-  content: "🌿";
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-.customPaypalButton:active {
-  background-color: #ffb10f;
-  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
-}
-
-/* Subscription Container */
-.subscriptionContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Subscription Box */
-.subscriptionBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensures content is spaced out */
-  position: relative;
-  background-color: #fff;
-  border: 3px solid #1f3d1a;
-  border-radius: 10px;
-  padding: 20px;
-  width: 15%;
-  height: 520px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease;
-  min-height: 250px;
-}
-
-.subscriptionBox:hover .donationButton {
-  display: block; /* Show the button when the box is hovered */
-}
-
-/* Hide the button by default */
-.subscriptionBox .donationButton {
-  display: none;
-  margin-top: auto; /* Pushes the button to the bottom */
-}
-
-.subscriptionBox:hover {
-  transform: scale(1.05);
-}
-
-.subscriptionBox h3 {
-  font-size: 20px;
-  color: black;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.subscriptionBox p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.subscriptionBox:hover h3 {
-  font-size: 22px;
-  color: #ffb10f;
-}
-
-/* Mail Donation and imgs boxes  */
-.content-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 50px auto;
-  max-width: 1200px;
-  gap: 20px;
-}
-
-.big-rectangle {
-  flex: 1;
-  background-color: #1f3d1a;
-  border: 5px solid #dec891;
-  color: white;
-  font-size: 1.5em;
-  padding: 30px;
-  text-align: center;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.content-section h1 {
-  text-decoration: underline;
-  text-decoration-color: #dec891;
-  text-align: center;
-}
-
-.content-section p2 {
-  font-size: 1.35em;
-  text-decoration: underline;
-  text-decoration-color: #dec891;
-  text-align: center;
-}
-
-.big-rectangle p {
-  font-size: 1.2em;
-  text-align: center;
-  max-width: 90%;
-  margin: auto;
-}
-
-.right-rectangles {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.image-rectangle {
-  background-color: #f4f4f4;
-  border: 3px solid #dec891;
-  padding: 10px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-rectangle img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-body {
-  background: linear-gradient(to bottom, #ffffff, #152a11);
-}
-
-/* Pop Up Contact Form */
-.vpopup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.vpopup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #1f3d1a;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #dec891;
-  width: 80%;
-  max-width: 800px;
-  max-height: 75vh;
-  text-align: center;
-  border: 15px solid #dec891;
-}
-.closed-btn {
-  cursor: pointer;
-  position: absolute;
-  right: 40px;
-  font-size: 60px;
-  background-color: #dec891;
-  border: none;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-.vpopup-content h2 {
-  font-size: 40px;
-  color: #dec891;
-}
-iframe {
-  width: 100%;
-  height: 60vh;
-  border: none;
-}
-
-/* Pop Up Contact Form */
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #1f3d1a;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #dec891;
-  width: 80%;
-  max-width: 800px;
-  max-height: 55vh;
-  text-align: center;
-  border: 15px solid #dec891;
-}
-.close-btn {
-  cursor: pointer;
-  position: absolute;
-  right: 40px;
-  font-size: 60px;
-  background-color: #dec891;
-  border: none;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-.popup-content h2 {
-  font-size: 40px;
-  color: #dec891;
-}
-iframe {
-  width: 100%;
-  height: 60vh;
-  border: none;
-}
-
-/* Pop Up Contact Form */
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #1f3d1a;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #dec891;
-  width: 80%;
-  max-width: 800px;
-  max-height: 80vh;
-  text-align: center;
-  border: 15px solid #dec891;
-}
-.close-btn {
-  cursor: pointer;
-  position: absolute;
-  right: 40px;
-  font-size: 60px;
-  background-color: #dec891;
-  border: none;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-.popup-content h2 {
-  font-size: 40px;
-  color: #dec891;
-}
-iframe {
-  width: 100%;
-  height: 60vh;
-  border: none;
-}
-
-/* Footer Section */
-.footer {
-  background-color: #091f05;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.footer__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: center;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-.footer__contact {
-  flex: 1 1 50%; /* Takes up half of the footer */
-}
-
-.footer__contact h2 {
-  color: #dec891;
-  font-size: 24px; /* Base font size */
-}
-
-.footer__contact p {
-  margin: 5px 0;
-  color: #ffffff;
-  font-size: 16px; /* Base font size for paragraph text */
-}
-
-/* Social Media Section */
-.footer__social {
-  flex: 1 1 50%; /* Takes up half of the footer */
-  text-align: center;
-}
-
-.footer__social h2 {
-  color: #dec891;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.footer__social-icons {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.footer__social-icons a {
-  display: inline-block;
-}
-
-.footer__social img {
-  width: 60px; /* Base width for small screens */
-  height: 60px; /* Base height for small screens */
-  object-fit: cover; /* Crop the image to fit within the dimensions */
-  cursor: pointer;
-  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-  border-radius: 50%; /* Optional: Make them circular if desired */
-}
-
-.footer__social img:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* Responsive Styling */
-@media (min-width: 768px) {
-  .footer__contact h2,
-  .footer__social h2 {
-    font-size: 36px; /* Increase font size on medium screens */
+  .closed-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    font-size: 60px;
+    background-color: #dec891;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
+  .vpopup-content h2 {
+    font-size: 40px;
+    color: #dec891;
+  }
+  iframe {
+    width: 100%;
+    height: 60vh;
+    border: none;
+  }
+
+  /* Pop Up Contact Form */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f3d1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #dec891;
+    width: 80%;
+    max-width: 800px;
+    max-height: 55vh;
+    text-align: center;
+    border: 15px solid #dec891;
+  }
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    font-size: 60px;
+    background-color: #dec891;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .popup-content h2 {
+    font-size: 40px;
+    color: #dec891;
+  }
+  iframe {
+    width: 100%;
+    height: 60vh;
+    border: none;
+  }
+
+  /* Pop Up Contact Form */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f3d1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #dec891;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    text-align: center;
+    border: 15px solid #dec891;
+  }
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    font-size: 60px;
+    background-color: #dec891;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .popup-content h2 {
+    font-size: 40px;
+    color: #dec891;
+  }
+  iframe {
+    width: 100%;
+    height: 60vh;
+    border: none;
+  }
+
+  /* Footer Section */
+  .footer {
+    background-color: #091f05;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+
+  .footer__contact {
+    flex: 1 1 50%; /* Takes up half of the footer */
+  }
+
+  .footer__contact h2 {
+    color: #dec891;
+    font-size: 24px; /* Base font size */
+  }
+
   .footer__contact p {
-    font-size: 18px; /* Increase paragraph font size */
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 16px; /* Base font size for paragraph text */
   }
-  .footer__social img {
-    width: 80px; /* Increase icon size on medium screens */
-    height: 80px;
-  }
-}
 
-@media (min-width: 1024px) {
-  .footer__contact h2,
+  /* Social Media Section */
+  .footer__social {
+    flex: 1 1 50%; /* Takes up half of the footer */
+    text-align: center;
+  }
+
   .footer__social h2 {
-    font-size: 50px; /* Increase font size on large screens */
+    color: #dec891;
+    font-size: 26px;
+    margin-bottom: 10px;
   }
-  .footer__contact p {
-    font-size: 35px; /* Increase paragraph font size */
+
+  .footer__social-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
   }
+
+  .footer__social-icons a {
+    display: inline-block;
+  }
+
   .footer__social img {
-    width: 150px; /* Increase icon size on large screens */
-    height: 150px;
+    width: 60px; /* Base width for small screens */
+    height: 60px; /* Base height for small screens */
+    object-fit: cover; /* Crop the image to fit within the dimensions */
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    border-radius: 50%; /* Optional: Make them circular if desired */
+  }
+
+  .footer__social img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+
+  /* Responsive Styling */
+  @media (min-width: 768px) {
+    .footer__contact h2,
+    .footer__social h2 {
+      font-size: 36px; /* Increase font size on medium screens */
+    }
+    .footer__contact p {
+      font-size: 18px; /* Increase paragraph font size */
+    }
+    .footer__social img {
+      width: 80px; /* Increase icon size on medium screens */
+      height: 80px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__contact h2,
+    .footer__social h2 {
+      font-size: 50px; /* Increase font size on large screens */
+    }
+    .footer__contact p {
+      font-size: 35px; /* Increase paragraph font size */
+    }
+    .footer__social img {
+      width: 150px; /* Increase icon size on large screens */
+      height: 150px;
+    }
   }
 }
