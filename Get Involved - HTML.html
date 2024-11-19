@@ -113,10 +113,20 @@
     </div>
 
     <div><br /><br /></div>
-
-    <!-- PayPal Donate Button -->
     <div class="donationButton">
-      <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <!-- Email Popup -->
+      <div class="email-popup" id="emailPopup" style="display: none">
+        <div class="email-popup-content">
+          <span class="close-btn" onclick="closeEmailPopup('emailPopup')">&times;</span>
+          <h2>Enter Your Email</h2>
+          <p>Please provide your email to continue.</p>
+          <input type="email" id="userEmail" placeholder="Enter your email" required />
+          <button onclick="validateAndSubmit('emailPopup', 'paypalBtn')">Submit</button>
+        </div>
+      </div>
+      
+      <!-- PayPal Donate Form -->
+      <form id="donateForm" action="https://www.paypal.com/donate" method="post" target="_top">
         <input type="hidden" name="business" value="QRXU9FW8VS4GE" />
         <input type="hidden" name="no_recurring" value="1" />
         <input
@@ -125,7 +135,8 @@
           value="Join us in protecting nature! Your donation helps preserve wildlife and habitats for future generations. Every bit counts!"
         />
         <input type="hidden" name="currency_code" value="USD" />
-        <button type="submit" class="customPaypalButton">Support Nature</button>
+        <!-- Updated to use the same button for showing the email popup -->
+        <button type="button" class="customPaypalButton" onclick="openEmailPopup('emailPopup')">Support Nature</button>
         <img
           alt=""
           border="0"
@@ -135,155 +146,121 @@
         />
       </form>
     </div>
+    
+    
+    </div>
 
     <div><br /><br /><br /><br /></div>
 
     <!-- Subscription Container -->
     <div class="subscriptionContainer">
-      <div class="subscriptionBox">
-        <h3>Membership</h3>
-        <p>
-          - Receive newsletter and important updates about our organization
-          <br />
-          - Invitations to member-only events <br />
-        </p>
-        <p><strong>$10 / month</strong></p>
+      
+      <!-- Subscription Container -->
+<div class="subscriptionContainer">
+  
+  <div class="subscriptionBox">
+    <h3>Membership</h3>
+    <p>
+      - Receive newsletter and important updates about our organization
+      <br />
+      - Invitations to member-only events
+      <br />
+    </p>
+    <p><strong>$10 / month</strong></p>
 
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="LZ2AAH77CUSTL" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="customPaypalButton">
-            Support Nature
-          </button>
-        </form>
-      </div>
+    <button type="button" class="customPaypalButton" onclick="openPopup('emailPopup', 'LZ2AAH77CUSTL')">
+      Support Nature
+    </button>
+  </div>
 
-      <div class="subscriptionBox">
-        <h3>Combo 1</h3>
-        <p>
-          - Receive newsletter and important updates about our organization
-          <br />
-          - Invitations to member-only events <br />
-          - Thank you for your extra financial support! <br />
-        </p>
-        <p><strong>$25 / month</strong></p>
-
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="WNR2H5XXJMJ6Q" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="customPaypalButton">
-            Support Nature
-          </button>
-        </form>
-      </div>
-
-      <div class="subscriptionBox">
-        <h3>Combo 2</h3>
-        <p>
-          - Receive newsletter and important updates about our organization
-          <br />
-          - Invitations to member-only events <br />
-          - Thank you for your extra financial support! <br />
-        </p>
-        <p><strong>$50 / month</strong></p>
-
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="F9DDDNZD8N6B2" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="customPaypalButton">
-            Support Nature
-          </button>
-        </form>
-      </div>
-
-      <div class="subscriptionBox">
-        <h3>Combo 3</h3>
-        <p>
-          - Receive newsletter and important updates about our organization
-          <br />
-          - Invitations to member-only events <br />
-          - Thank you for your extra financial support! <br />
-        </p>
-        <p><strong>$75 / month</strong></p>
-
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="2SVMPLM6MF7H8" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="customPaypalButton">
-            Support Nature
-          </button>
-        </form>
-      </div>
-
-      <div class="subscriptionBox">
-        <h3>Combo 4</h3>
-        <p>
-          - Receive newsletter and important updates about our organization
-          <br />
-          - Invitations to member-only events <br />
-          - Thank you for your extra financial support! <br />
-        </p>
-        <p><strong>$100 / month</strong></p>
-
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="YZFQWD5NXNTYS" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="customPaypalButton">
-            Support Nature
-          </button>
-        </form>
-      </div>
-
-      <div class="subscriptionBox">
-        <h3>Corporate Sponsor</h3>
-        <p>
-          - Receive newsletter and important updates about our organization
-          <br />
-          - Invitations to member-only events <br />
-          - Receive corporate only invitations <br />
-        </p>
-        <p><strong>$100 / month</strong></p>
-
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top"
-        >
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="5PNTEERACCEN6" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="customPaypalButton">
-            Support Nature
-          </button>
-        </form>
-      </div>
+  <!-- Email Popup -->
+  <div id="emailPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('emailPopup')">&times;</span>
+      <h2>Support Nature</h2>
+      <p>Please enter your email to complete the donation:</p>
+      <input type="email" id="emailInput" placeholder="Enter your email" />
+      <button onclick="submitEmail('LZ2AAH77CUSTL')">Submit</button>
     </div>
+  </div>
 
+  <div class="subscriptionBox">
+    <h3>Combo 1</h3>
+    <p>
+      - Receive newsletter and important updates about our organization
+      <br />
+      - Invitations to member-only events
+      <br />
+      - Thank you for your extra financial support!
+      <br />
+    </p>
+    <p><strong>$25 / month</strong></p>
+
+    <button type="button" class="customPaypalButton" onclick="openPopup('emailPopup', 'WNR2H5XXJMJ6Q')">
+      Support Nature
+    </button>
+  </div>
+
+  <div class="subscriptionBox">
+    <h3>Combo 2</h3>
+    <p>
+      - Receive newsletter and important updates about our organization
+      <br />
+      - Invitations to member-only events <br />
+      - Thank you for your extra financial support! <br />
+    </p>
+    <p><strong>$50 / month</strong></p>
+
+    <button type="button" class="customPaypalButton" onclick="openPopup('emailPopup', 'F9DDDNZD8N6B2')">
+      Support Nature
+    </button>
+  </div>
+
+  <div class="subscriptionBox">
+    <h3>Combo 3</h3>
+    <p>
+      - Receive newsletter and important updates about our organization
+      <br />
+      - Invitations to member-only events <br />
+      - Thank you for your extra financial support! <br />
+    </p>
+    <p><strong>$75 / month</strong></p>
+
+    <button type="button" class="customPaypalButton" onclick="openPopup('emailPopup', '2SVMPLM6MF7H8')">
+      Support Nature
+    </button>
+  </div>
+
+  <div class="subscriptionBox">
+    <h3>Combo 4</h3>
+    <p>
+      - Receive newsletter and important updates about our organization
+      <br />
+      - Invitations to member-only events <br />
+      - Thank you for your extra financial support! <br />
+    </p>
+    <p><strong>$100 / month</strong></p>
+
+    <button type="button" class="customPaypalButton" onclick="openPopup('emailPopup', 'YZFQWD5NXNTYS')">
+      Support Nature
+    </button>
+  </div>
+
+  <div class="subscriptionBox">
+    <h3>Corporate Sponsor</h3>
+    <p>
+      - Receive newsletter and important updates about our organization
+      <br />
+      - Invitations to member-only events <br />
+      - Receive corporate only invitations <br />
+    </p>
+    <p><strong>$100 / month</strong></p>
+
+    <button type="button" class="customPaypalButton" onclick="openPopup('emailPopup', '5PNTEERACCEN6')">
+      Support Nature
+    </button>
+  </div>
+</div>
     <!-- Mail Donation and imgs boxes -->
     <div class="content-section">
       <div class="big-rectangle">
