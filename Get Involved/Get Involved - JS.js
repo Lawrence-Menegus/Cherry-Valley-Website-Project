@@ -48,7 +48,59 @@ function openPopup(popupId) {
   document.getElementById(popupId).style.display = "flex";
 }
 
-// Function to validate the email and submit, then proceed to PayPal
+// Function to show PayPal donation button after submitting the email form
+function showPaypalButton() {
+  // Close the email popup after submission
+  closeEmailPopup("emailPopup"); // Close the email popup
+
+  // Show the PayPal donation button
+  document.querySelector(".customPaypalButton").style.display = "block";
+  // Optionally, scroll to the PayPal button if needed
+  document
+    .querySelector(".customPaypalButton")
+    .scrollIntoView({ behavior: "smooth" });
+}
+
+// Function to handle form submission via Google Forms (simulating the submission flow)
+function handleFormSubmission(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // You might want to use the form's built-in submission process here
+  // Simulate successful form submission by showing PayPal button
+  showPaypalButton();
+
+  // Optionally, you can send the form data manually using the Google Forms API or simply rely on Google Forms to handle the backend submission
+  alert("Thank you for subscribing!");
+  // Close the email popup and show PayPal button
+  closeEmailPopup("emailPopup");
+}
+
+// Google Form submission logic
+function setupGoogleFormSubmission() {
+  const googleFormIframe = document.querySelector(
+    "iframe[src*='docs.google.com/forms']"
+  );
+
+  googleFormIframe.addEventListener("load", function () {
+    // You can track the form submission completion here,
+    // but for now, we simulate the email form submission with a button trigger
+    const submitButton = googleFormIframe.contentWindow.document.querySelector(
+      ".appsMaterialWizButtonPaperbuttonContent"
+    );
+
+    // If Google Form submit button exists, simulate a click event on it
+    if (submitButton) {
+      submitButton.addEventListener("click", function () {
+        showPaypalButton();
+      });
+    }
+  });
+}
+
+// Trigger the Google Form setup when the iframe is loaded
+window.addEventListener("load", setupGoogleFormSubmission);
+
+// Function to validate the email and submit
 function validateAndSubmit(popupId, buttonId) {
   const email = document.getElementById("userEmail").value;
 
@@ -57,32 +109,18 @@ function validateAndSubmit(popupId, buttonId) {
 
   if (emailPattern.test(email)) {
     alert("Thank you for subscribing!");
-    closeEmailPopup(popupId); // Close the popup after successful submission
+    closeEmailPopup(popupId); // Close the email popup after successful submission
 
-    // Proceed to PayPal redirection
-    document.getElementById(buttonId).click();
+    // Submit the PayPal form
+    document.getElementById("donateForm").submit();
   } else {
     alert("Please enter a valid email.");
   }
 }
 
-// Event listener for the form submit button (ensure to attach this to your submit button)
-// Assuming each form has a submit button with an id `submitBtn-1`, `submitBtn-2`, etc.
-document.getElementById("submitBtn-1").addEventListener("click", function () {
-  validateAndSubmit("emailPopup-1", "paypalBtn-1");
-});
-document.getElementById("submitBtn-2").addEventListener("click", function () {
-  validateAndSubmit("emailPopup-2", "paypalBtn-2");
-});
-document.getElementById("submitBtn-3").addEventListener("click", function () {
-  validateAndSubmit("emailPopup-3", "paypalBtn-3");
-});
-document.getElementById("submitBtn-4").addEventListener("click", function () {
-  validateAndSubmit("emailPopup-4", "paypalBtn-4");
-});
-document.getElementById("submitBtn-5").addEventListener("click", function () {
-  validateAndSubmit("emailPopup-5", "paypalBtn-5");
-});
-document.getElementById("submitBtn-6").addEventListener("click", function () {
-  validateAndSubmit("emailPopup-6", "paypalBtn-6");
-});
+// Event listener for when the email form is submitted
+document
+  .getElementById("emailForm")
+  .addEventListener("submit", function (event) {
+    handleFormSubmission(event);
+  });

@@ -304,7 +304,11 @@ body {
 }
 
 .donationButton {
-  text-align: center;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width to fill the screen */
 }
 
 .customPaypalButton {
@@ -321,7 +325,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto; /* Ensures the button is at the bottom */
+  margin-top: auto;
+  margin-left: 575px;
 }
 
 .customPaypalButton:hover {
@@ -337,6 +342,40 @@ body {
 }
 
 .customPaypalButton:active {
+  background-color: #ffb10f;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
+}
+
+.customPaypalButtonSubscription {
+  background-color: #1f3d1a;
+  border: none;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-family: "Verdana", sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.customPaypalButtonSubscription:hover {
+  background-color: #3e8e41;
+  color: #ffb10f;
+  transform: scale(1.05);
+}
+
+.customPaypalButtonSubscription::before {
+  content: "🌿";
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.customPaypalButtonSubscription:active {
   background-color: #ffb10f;
   box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3);
 }
@@ -719,7 +758,8 @@ iframe {
   }
 }
 
-//* The popup container (hidden by default) */
+/* The popup container (hidden by default) */
+/* The popup container (hidden by default) */
 .email-popup {
   display: none; /* Hidden by default */
   position: fixed;
@@ -734,15 +774,18 @@ iframe {
 /* Popup content box */
 .email-popup-content {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Adjust this value to move closer to the top or bottom of the screen */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Keep it centered horizontally and vertically */
   background-color: #1f3d1a; /* Greenish background */
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 5px #dec891; /* Goldish shadow */
-  width: 500px; /* Fixed width as per your request */
-  height: 300px; /* Fixed height */
+  width: 550px; /* Fixed width */
+  height: 800px; /* Fixed height */
   max-width: 100%;
   max-height: 100%;
   text-align: center;
@@ -774,13 +817,13 @@ iframe {
 
 /* Heading and text */
 .email-popup h2 {
-  font-size: 24px;
+  font-size: 35px;
   color: #dec891; /* Goldish color */
   margin: 0 0 10px;
 }
 
 .email-popup p {
-  font-size: 16px;
+  font-size: 26px;
   margin-bottom: 20px;
   color: #fff; /* White text */
 }
