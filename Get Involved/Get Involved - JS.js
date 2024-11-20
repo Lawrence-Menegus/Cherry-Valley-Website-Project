@@ -124,3 +124,13 @@ document
   .addEventListener("submit", function (event) {
     handleFormSubmission(event);
   });
+
+// Function to open the popup Volunteer
+function openPopup() {
+  document.getElementById("vpopup").style.display = "block"; // Show the popup
+}
+
+// Function to close the popup
+function closedPopup() {
+  document.getElementById("vpopup").style.display = "none"; // Hide the popup
+}
