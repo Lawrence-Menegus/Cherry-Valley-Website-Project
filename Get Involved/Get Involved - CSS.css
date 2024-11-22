@@ -797,7 +797,7 @@ iframe {
   cursor: pointer;
   position: absolute;
   right: 20px;
-  top: 10px;
+  top: 25px;
   font-size: 30px;
   background-color: #dec891;
   color: #1f3d1a; /* Match the popup background */

@@ -785,3 +785,25 @@ iframe {
     height: 150px;
   }
 }
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  font-size: 30px;
+  background-color: #dec891;
+  color: #1f3d1a; /* Match the popup background */
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn:hover {
+  background-color: #f1e0a6; /* Lighter color on hover */
+}

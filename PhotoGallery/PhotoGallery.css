@@ -325,20 +325,29 @@ iframe {
   text-align: center;
   border: 15px solid #dec891;
 }
+
 .closed-btn {
   cursor: pointer;
   position: absolute;
-  right: 40px;
-  font-size: 60px;
+  right: 25px;
+  top: 10px;
+  font-size: 30px;
   background-color: #dec891;
+  color: #1f3d1a; /* Match the popup background */
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+.closed-btn:hover {
+  background-color: #f1e0a6; /* Lighter color on hover */
+}
+
 .vpopup-content h2 {
   font-size: 40px;
   color: #dec891;
@@ -395,9 +404,9 @@ iframe {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #152a11;
+  background-color: #dec891;
   border: none;
-  color: white;
+  color: black;
   font-size: 2em;
   cursor: pointer;
   padding: 10px;
@@ -599,4 +608,25 @@ iframe {
     width: 150px; /* Increase icon size on large screens */
     height: 150px;
   }
+}
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  font-size: 30px;
+  background-color: #dec891;
+  color: #1f3d1a; /* Match the popup background */
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn:hover {
+  background-color: #f1e0a6; /* Lighter color on hover */
 }
