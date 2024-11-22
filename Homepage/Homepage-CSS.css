@@ -622,8 +622,9 @@ iframe {
 }
 
 /* Pop Up Contact Form */
+/* Pop Up Contact Form */
 .popup {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -631,6 +632,12 @@ iframe {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0; /* Fully transparent */
+  transition: opacity 0.5s ease; /* Smooth fade-in/out effect */
+}
+.popup.show {
+  display: block; /* Make visible */
+  opacity: 1; /* Fully visible */
 }
 .popup-content {
   position: absolute;
@@ -665,6 +672,7 @@ iframe {
   font-size: 40px;
   color: #dec891;
 }
+
 iframe {
   width: 100%;
   height: 60vh;

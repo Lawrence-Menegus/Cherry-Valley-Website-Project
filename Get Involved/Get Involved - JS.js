@@ -8,20 +8,40 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-// Show the main popup when the page loads
-window.onload = function () {
-  document.getElementById("popup").style.display = "block";
-};
+// Delay popup appearance by 30 seconds (30000 ms)
+document.addEventListener("DOMContentLoaded", function () {
+  if (!localStorage.getItem("popupShown")) {
+    setTimeout(function () {
+      showPopup(); // Show the popup after 30 seconds
+    }, 30000); // 30 seconds delay
+  }
+});
 
-// Function to close the main popup
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
+// Function to show the popup with smooth transition
+function showPopup() {
+  const popup = document.getElementById("popup");
+  popup.style.display = "block"; // Ensure the popup is visible
+  setTimeout(() => {
+    popup.classList.add("show"); // Add the 'show' class for smooth transition
+  }, 10); // Short delay to ensure the popup is displayed before the transition starts
+  localStorage.setItem("popupShown", "true"); // Mark popup as shown
 }
 
+// Function to close the popup with smooth transition
+function closePopup() {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show"); // Remove the 'show' class to trigger the hide transition
+  setTimeout(() => {
+    popup.style.display = "none"; // Hide the popup after the transition ends
+  }, 300); // Match the duration of the transition
+}
+
+// Function to open the email popup
 function openEmailPopup(popupId) {
   document.getElementById(popupId).style.display = "flex";
 }
 
+// Function to close the email popup
 function closeEmailPopup(popupId) {
   document.getElementById(popupId).style.display = "none";
 }
@@ -126,11 +146,11 @@ document
   });
 
 // Function to open the popup Volunteer
-function openPopup() {
+function openVolunteerPopup() {
   document.getElementById("vpopup").style.display = "block"; // Show the popup
 }
 
-// Function to close the popup
-function closedPopup() {
+// Function to close the Volunteer popup
+function closeVolunteerPopup() {
   document.getElementById("vpopup").style.display = "none"; // Hide the popup
 }
